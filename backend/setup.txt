@@ -35,7 +35,24 @@
 13. import models in the main.py also create constructor of the model which we will be using for the data
 ex - def __init__(self , ):
 
-14. now we need validation for price is not negative and other so we will use pydantic for it
+14. All the CRUD Operations are done and checked by swagger UI (alternative of postman)
+
+15. now instead of list(static storage) we will use postgresql (SQLAlchemy) for our CRUD
+
+16. pip install sqlalchemy psycopg2 -> for sqlalchemy and postgresql
+
+17. now we have created database.py we will be doing configuration
+
+18. we need sessionLocal -> everytime you connect with something is a session 
+ex -> session is like you have logged in something
+
+19. sessionLocal is variable and sessionmaker()-> object of session local
+
+20. from sqlalchemy.orm import sessionmaker
+-> SessionLocal = sessionmaker(autocommit=False, autoflush=False , bind=engine)
+
+
+
 
 
 
