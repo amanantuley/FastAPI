@@ -1,0 +1,42 @@
+1. Create Virtual Environment
+-> python -m venv myenv
+
+2. Activate it
+-> E:\FastAPI\backend\myenv\Scripts\Activate.ps1
+
+3. Deactivate
+-> deactivate
+
+4. Install Dependencies
+-> pip install fastapi uvicorn
+
+5. Create main.py
+-> localhost:8000 - for backend 
+-> fastapi port number - 8000
+-> react port number - 3000
+
+6. import fastapi
+-> from fastapi import FastAPI
+
+7. start it
+-> uvicorn main:app --reload
+
+9. REST API 
+-> GET - READ , PUT - UPDATE , POST - CREATE , DELETE - DELETE
+
+10. Use Decorators
+-> @app.get("/") -> root
+
+11. first in main.py i have write the root page and other pages
+
+12. in models.py there will be all the data handling code like users , products and etc
+-> models - holds data (use to represent data)
+
+13. import models in the main.py also create constructor of the model which we will be using for the data
+ex - def __init__(self , ):
+
+14. now we need validation for price is not negative and other so we will use pydantic for it
+
+
+
+
