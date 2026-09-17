@@ -1,12 +1,18 @@
-from sqlalchemy.orm import sessionmaker
+import os
+
 from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
 
 
+db_url = os.getenv("DATABASE_URL")
 
-
-db_url = "postgresql://postgres:aman@localhost:5432/inventory_management"
+if not db_url:
+    raise RuntimeError("DATABASE_URL environment variable is not set")
 
 engine = create_engine(db_url)
 
-SessionLocal = sessionmaker(autocommit=False, autoflush=False , bind=engine)
-
+SessionLocal = sessionmaker(
+    autocommit=False,
+    autoflush=False,
+    bind=engine
+)
